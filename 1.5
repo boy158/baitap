@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+struct phuongThuc{
+	int a;
+	int x;
+	int n;
+};
+void nhapphuongThuc(phuongThuc &l){
+	cout <<"Nhap lan luot a va x va n: "<< endl;
+	cin >> l.a >> l.x >> l.n ;
+}
+void xuatphuongThuc(phuongThuc l){
+	cout <<l.a << "*" << l.x << "^" << l.n << endl;
+}
+int main(){
+	phuongThuc l;
+	nhapphuongThuc(l);
+	xuatphuongThuc(l);
+	return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+struct HonSo{
+	int tuSo;
+	int mauSo; 
+	int phanNguyen;
+};
+void nhapHonSo(HonSo &l){
+	cout<<"Nhap vao phan nguyen va tu so"<<endl;
+	cin >> l.phanNguyen >> l.tuSo;
+	do
+	{	
+		cout<<"Nhap mau so: "<< endl;
+		cin>>l.mauSo;
+		if(l.mauSo==0)
+			cout<<"Nhap lai mau so khac 0: "<< endl;
+			
+	}while(l.mauSo==0);
+}
+void xuatHonSo(HonSo l){
+	cout<<l.phanNguyen << "(" <<l.tuSo <<"/"<< l.mauSo<<")"<<endl;
+}
+int main(){
+	HonSo l;
+	nhapHonSo(l);
+	xuatHonSo(l);
+	return 0;
+}
