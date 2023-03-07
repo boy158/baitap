@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int Demphantu(int a[], int size){ 
+ if(size==0){  
+  return 0;
+}
+int count=0; 
+if (a[0]> 0){ 
+	count=1; 
+ }
+ return count + Demphantu (a+1, size-1); 
+}
+ int main(){
+ 	int a[]={-1,-4,-5,-7, 5, 7, 8,4,6};
+ 	int size =sizeof(a)/sizeof(a[0]); 
+ 	int Dem = Demphantu(a,size); 
+ 	cout << " so phan tu duong trong mang la " << Dem << endl;
+ 	return 0;
+ 		
+ }

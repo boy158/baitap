@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int Tonginmang(int a[],int size, int x=0, int y=0){
+	
+	   
+    if (x == size) { // neu x trich xuat het mang thi se tra ve gia tri y 
+        return y;
+    }
+	if(a[x]%2==0){  //neu phan tu trong mang a chia het cho 2 thi cong cai so chan lai
+	  y +=a[x]; //y=y+a[]
+	  }
+	  return Tonginmang (a, size, x+1, y);
+	}
+    int main (){
+    	int a[]={1,2,3,4,5,6,7,8,9,10};
+    	int size = sizeof(a) / sizeof(a[0]); // tinh kich thuong cua mang 
+    	int Tong= Tonginmang(a, size);  // (gia tri tra ve la so chan trong mang a, kich thuoc mang)
+    	cout << "tong cua mang la cac so chan la= " << Tong <<endl;
+    	return 0;
+    }	
